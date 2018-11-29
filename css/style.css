@@ -720,3 +720,10 @@ footer .copyright a:hover {
   text-decoration: none;
   color: #d15f70;
 }
+
+/*========================================================
+                     Customization
+=========================================================*/
+.text-primary + .text-primary-dark {
+  width: 50%;
+}
