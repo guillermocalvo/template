@@ -92,6 +92,15 @@
 
 	{% if site.data.baby.gallery %}
 
+		{% assign photos = '' %}
+		{% for photo in site.static_files %}
+			{% if photo.path contains 'images/gallery' %}{% unless photo.path contains 'thumbnail' %}
+				{% unless photos == '' %}{% assign photos = photos | append: "|" %}{% endunless %}
+				{% assign photos = photos | append: photo.path %}
+			{% endunless %}{% endif %}
+		{% endfor %}
+		{% assign photos = photos | split: "|" %}
+
         <section class="parallax well2" data-url="images/parallax1.jpg" data-mobile="true">
             <div class="container">
                 <h2 class="text-primary">{{ site.data.baby.gallery.title }}</h2>
@@ -102,14 +111,14 @@
 
                 <div class="owl-carousel">
 
-			{% assign items = site.data.baby.gallery.photos.size | divided_by: 2.0 | ceil %}
+			{% assign items = photos.size | divided_by: 2.0 | ceil %}
 
 			{% for i in (1..items) %}
 				{% assign offset = forloop.index0 | times: 2 %}
 					<div class="item ">
-				{% for photo in site.data.baby.gallery.photos limit:2 offset:offset %}
-                        <a class="thumb img-circle" data-fancybox-group="1" href="{{ photo.image }}">
-                            <img class="img-circle" src="{{ photo.thumbnail }}" alt=""/>
+				{% for photo in photos limit:2 offset:offset %}
+                        <a class="thumb img-circle" data-fancybox-group="1" href="{{ site.baseurl }}{{ photo }}">
+                            <img class="img-circle" src="{{ site.baseurl }}{{ photo | replace: '.jpg', '.thumbnail.jpg' }}" alt=""/>
                             <span class="thumb_overlay img-circle"></span>
                         </a>
 				{% endfor %}
