@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="fw-b text-secondary">
-{{ content }}
+						{{ content }}
                     </div>
                 </div>
             </div>
@@ -144,9 +144,16 @@
     <footer>
         <div class="container">
             <p class="copyright">
-                <a class="text-secondary ff_skin head2 fw-n" href="#"> AliciaJonson</a> <br/> © <span
-                    id="copyright-year"></span> |
-                <span></span>All rights reserved</p>
+                <a class="text-secondary ff_skin head2 fw-n" href="#">
+					{{ site.data.baby.full_name.name }} {{ site.data.baby.full_name.surname }}
+				</a>
+				<br/>
+				© <span id="copyright-year">{{ 'now' | date: "%Y" }}</span>
+				{{ site.owner }}
+				| All rights reserved
+				<br/>
+				{{ site.data.baby.footer }}
+			</p>
         </div>
     </footer>
 </div>
