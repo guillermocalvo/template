@@ -102,64 +102,19 @@
 
                 <div class="owl-carousel">
 
-                    <div class="item ">
+			{% assign items = site.data.baby.gallery.photos.size | divided_by: 2.0 | ceil %}
 
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img04_original.jpg">
-                            <img class="img-circle" src="images/page-1_img04.jpg" alt=""/>
+			{% for i in (1..items) %}
+				{% assign offset = forloop.index0 | times: 2 %}
+					<div class="item ">
+				{% for photo in site.data.baby.gallery.photos limit:2 offset:offset %}
+                        <a class="thumb img-circle" data-fancybox-group="1" href="{{ photo.image }}">
+                            <img class="img-circle" src="{{ photo.thumbnail }}" alt=""/>
                             <span class="thumb_overlay img-circle"></span>
                         </a>
-
-
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img08_original.jpg">
-                            <img class="img-circle" src="images/page-1_img08.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-
-                    </div>
-
-
-                    <div class="item ">
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img05_original.jpg">
-                            <img class="img-circle" src="images/page-1_img05.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-
-
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img09_original.jpg">
-                            <img class="img-circle" src="images/page-1_img09.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-
-                    </div>
-
-
-                    <div class="item ">
-
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img06_original.jpg">
-                            <img class="img-circle" src="images/page-1_img06.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-
-
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img10_original.jpg">
-                            <img class="img-circle" src="images/page-1_img10.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-                    </div>
-
-                    <div class="item ">
-
-                        <a class="thumb img-circle" data-fancybox-group="1" href="images/page-1_img07_original.jpg">
-                            <img class="img-circle" src="images/page-1_img07.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-
-
-                        <a class="thumb img-circle" href="images/page-1_img11_original.jpg">
-                            <img class="img-circle" src="images/page-1_img11.jpg" alt=""/>
-                            <span class="thumb_overlay img-circle"></span>
-                        </a>
-                    </div>
+				{% endfor %}
+					</div>
+			{% endfor %}
 
                 </div>
 
