@@ -444,7 +444,7 @@ article:hover .icon1:before, article:hover .icon2:before, article:hover .icon3:b
 }
 
 .bg-img {
-  background: url("../images/bg-content-img.jpg") no-repeat;
+  background: url("../photos/footer.jpg") no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -635,7 +635,7 @@ article:hover .icon1:before, article:hover .icon2:before, article:hover .icon3:b
                      HEADER  Section
 =========================================================*/
 header {
-  background: url("../images/bg-header-img.jpg") no-repeat;
+  background: url("../photos/header.jpg") no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
