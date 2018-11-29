@@ -1,3 +1,6 @@
+---
+# Main script
+---
 function include(scriptUrl) {
     document.write('<script src="' + scriptUrl + '"></script>');
 }
@@ -142,8 +145,8 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 
         $(document).ready(function () {
             var date = new Date(),
-                countTo = new Date(date.getFullYear(), date.getMonth() + 6, date.getDay() + 14, date.getHours() + 14);
-            $(o).countdown({until: countTo, format: 'odHM'});
+                birthday = new Date('{{ site.data.baby.birthday }}');
+            $(o).countdown({since: birthday, format: 'odHM'});
         });
     }
 })(jQuery);
