@@ -1,7 +1,9 @@
 full_name:
   name: Jane
   surname: Doe
+
 slogan: welcome to the world!
+
 family:
   -
     icon: icon1
@@ -41,3 +43,11 @@ family:
 #    link:
 #      title: Read More
 #      url: '#'
+
+gallery:
+  title: My latest photos
+  text: |
+    Look through my amazing photos. Discover my first year, it was so exciting!!!
+    Here you can find my main growth milestones;
+    my first smile, my first cry, my first bath, my first steps, new fears, new feelings...
+    Join the wonderful virtual tour to my first-year new openings.
