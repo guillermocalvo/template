@@ -60,50 +60,31 @@
         <section class="well bg-secondary shadow-mod">
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+{% assign family_members = site.data.baby.family | size %}
+{% assign columns = 12 | divided_by: family_members %}
+
+			{% if site.data.baby.family %}
+				{% for member in site.data.baby.family %}
+                    <div class="col-md-{{ columns }} col-sm-{{ columns }} col-xs-12">
                         <article>
-                            <div class="icon icon1"></div>
-                            <p class="img-circle"><img class="img-circle" src="images/page-1_img01.jpg" alt=""/></p>
+                            <div class="icon {{ member.icon }}"></div>
+                            <p class="img-circle"><img class="img-circle" src="{{ member.image }}" alt=""/></p>
 
-                            <h3 class="text-primary">My mother</h3>
-                            <h4 class="text-secondary">Miranda Johnson </h4>
+                            <h3 class="text-primary">{{ member.primary }}</h3>
+                            <h4 class="text-secondary">{{ member.secondary }}</h4>
 
-                            <p>My mother gave me birth. <br/> She gives me all the love she has. <br/> She is the most
-                                wonderful woman in the whole world </p>
-                            <a href="#" class="btn">Read More</a>
+							{{ member.text | markdownify }}
+
+							{% if member.link %}
+                            <a href="{{ member.link.url }}" class="btn">{{ member.link.title }}</a>
+							{% endif %}
                         </article>
 
                     </div>
+				{% endfor %}
+			{% endif %}
 
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <article>
-                            <div class="icon icon2"></div>
-                            <p class="img-circle"><img class="img-circle" src="images/page-1_img02.jpg" alt=""/></p>
-
-                            <h3 class="text-primary">My father</h3>
-                            <h4 class="text-secondary">Richard Johnson </h4>
-
-                            <p>My father is very strong and brave. <br/> He always protects our home, my mother, <br/>
-                                brother and me of course. </p>
-                            <a href="#" class="btn">Read More</a>
-                        </article>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <article>
-                            <div class="icon icon3"></div>
-                            <p class="img-circle"><img class="img-circle" src="images/page-1_img03.jpg" alt=""/></p>
-
-                            <h3 class="text-primary">My brother</h3>
-                            <h4 class="text-secondary">Denis Johnson </h4>
-
-                            <p>This is my elder brother. <br/> He is bubbling with life and eager to play <br/> with me
-                                any time I want. I love him very much! </p>
-                            <a href="#" class="btn">Read More</a>
-                        </article>
-
-                    </div>
                 </div>
             </div>
             <hr/>
