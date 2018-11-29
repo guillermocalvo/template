@@ -1,8 +1,10 @@
+slogan: welcome to the world!
+
 full_name:
   name: Jane
   surname: Doe
 
-slogan: welcome to the world!
+birthday: '2018-04-10 14:30'
 
 family:
   -
