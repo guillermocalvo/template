@@ -94,7 +94,7 @@
 
 		{% assign photos = '' %}
 		{% for photo in site.static_files %}
-			{% if photo.path contains 'images/gallery' %}{% unless photo.path contains 'thumbnail' %}
+			{% if photo.path contains 'photos/gallery' %}{% unless photo.path contains 'thumbnail' %}
 				{% unless photos == '' %}{% assign photos = photos | append: "|" %}{% endunless %}
 				{% assign photos = photos | append: photo.path %}
 			{% endunless %}{% endif %}
