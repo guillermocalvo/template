@@ -92,3 +92,5 @@ gallery:
 goodbye:
   primary: Good bye!
   secondary: View more later
+
+footer: "Made with <i class='fa fa-heart'></i> for you"
