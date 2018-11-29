@@ -9,7 +9,7 @@ birthday: '2018-04-10 14:30'
 family:
   -
     icon: icon1
-    image: images/page-1_img01.jpg
+    image: photos/mom.jpg
     primary: My mother
     secondary: Miranda Doe
     text: |
@@ -21,7 +21,7 @@ family:
       url: '#'
   -
     icon: icon2
-    image: images/page-1_img02.jpg
+    image: photos/dad.jpg
     primary: My father
     secondary: Richard Doe
     text: |
@@ -35,7 +35,7 @@ family:
       url: '#'
   -
     icon: icon3
-    image: images/page-1_img03.jpg
+    image: photos/brother.jpg
     primary: My brother
     secondary: Denis Doe
     text: |
@@ -47,7 +47,7 @@ family:
       url: '#'
   -
     icon: icon3
-    image: images/page-1_img03.jpg
+    image: photos/brother.jpg
     primary: My brother
     secondary: Tom Doe
     text: |
