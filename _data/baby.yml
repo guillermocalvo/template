@@ -88,3 +88,7 @@ gallery:
     -
       image: images/page-1_img11_original.jpg
       thumbnail: images/page-1_img11.jpg
+
+goodbye:
+  primary: Good bye!
+  secondary: View more later
