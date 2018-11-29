@@ -47,19 +47,21 @@ family:
     icon: icon3
     image: images/page-1_img03.jpg
     primary: My brother
-    secondary: Denis Doe
+    secondary: Tom Doe
     text: |
-      This is my elder brother. <br/>
-      He is bubbling with life and eager to play <br/>
+      This is my younger brother.
+
+      He is bubbling with life and eager to play
+
       with me any time I want. I love him very much!
-    link:
-      title: Read More
-      url: '#'
+#    link:
+#      title: Read More
+#      url: '#'
 
 gallery:
   title: My latest photos
   text: |
-    Look through my amazing photos. Discover my first year, it was so exciting!!!
+    Look through my amazing photos. Discover my first year, it was so exciting!
     Here you can find my main growth milestones;
     my first smile, my first cry, my first bath, my first steps, new fears, new feelings...
     Join the wonderful virtual tour to my first-year new openings.
