@@ -51,3 +51,28 @@ gallery:
     Here you can find my main growth milestones;
     my first smile, my first cry, my first bath, my first steps, new fears, new feelings...
     Join the wonderful virtual tour to my first-year new openings.
+  photos:
+    -
+      image: images/page-1_img04_original.jpg
+      thumbnail: images/page-1_img04.jpg
+    -
+      image: images/page-1_img05_original.jpg
+      thumbnail: images/page-1_img05.jpg
+    -
+      image: images/page-1_img06_original.jpg
+      thumbnail: images/page-1_img06.jpg
+    -
+      image: images/page-1_img07_original.jpg
+      thumbnail: images/page-1_img07_original.jpg
+    -
+      image: images/page-1_img08_original.jpg
+      thumbnail: images/page-1_img08.jpg
+    -
+      image: images/page-1_img09_original.jpg
+      thumbnail: images/page-1_img09.jpg
+    -
+      image: images/page-1_img10_original.jpg
+      thumbnail: images/page-1_img10.jpg
+    -
+      image: images/page-1_img11_original.jpg
+      thumbnail: images/page-1_img11.jpg
