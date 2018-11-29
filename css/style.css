@@ -727,3 +727,7 @@ footer .copyright a:hover {
 .text-primary + .text-primary-dark {
   width: 50%;
 }
+
+.brand + .text-secondary {
+  width: 50%;
+}
