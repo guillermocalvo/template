@@ -90,15 +90,15 @@
             <hr/>
         </section>
 
+	{% if site.data.baby.gallery %}
+
         <section class="parallax well2" data-url="images/parallax1.jpg" data-mobile="true">
             <div class="container">
-                <h2 class="text-primary">My latest photos:</h2>
+                <h2 class="text-primary">{{ site.data.baby.gallery.title }}</h2>
 
-                <p class="text-primary-dark">Look through my amazing photos. Discover my first year,  it was so
-                    exciting! Here you can find <br/> my main growth milestones; my first smile, my first cry, my first bath,
-                    my first steps, new fears, <br/> new feelings... Join the wonderful virtual tour to my first-year
-                    new
-                    openings.</p>
+                <div class="text-primary-dark">
+					{{ site.data.baby.gallery.text | markdownify }}
+				</div>
 
                 <div class="owl-carousel">
 
@@ -165,6 +165,8 @@
 
             </div>
         </section>
+
+	{% endif %}
 
         <section class="well2 well2__mod bg-img">
             <hr/>
